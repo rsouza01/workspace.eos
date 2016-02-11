@@ -1,0 +1,9 @@
+total 12232
+drwxrwxr-x 2 rsouza rsouza    4096 Jan 28 20:27 ./
+drwxrwxr-x 4 rsouza rsouza    4096 Jan 28 20:24 ../
+-rw-rw-r-- 1 rsouza rsouza       0 Jan 28 20:27 dir.out
+-rw------- 1 rsouza rsouza 2491235 Ago 19  2014 eos_swrdp_l0040_L97a32.dat
+-rw------- 1 rsouza rsouza 2491235 Ago 19  2014 eos_swrdp_l0049_L97a32.dat
+-rw------- 1 rsouza rsouza 2491000 Ago 19  2014 eos_swrdp_l0059_L97a32.dat
+-rw------- 1 rsouza rsouza 2491235 Ago 19  2014 eos_swrdp_l0071_L97a32.dat
+-rw------- 1 rsouza rsouza 2491235 Ago 19  2014 eos_swrdp_l0085_L97a32.dat
