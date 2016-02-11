@@ -1,10 +1,14 @@
 #!/usr/bin/gnuplot
 # Arquivo: eos.hyb.swrpd.mit.plt
 
+reset
+
+#Macros
 
 set macro
+hadron_eos='BJ'
+quark_eos='MIT Bag'
 
-reset
 
 # Settings for all plots
 set datafile separator ","
@@ -32,7 +36,7 @@ set title 'Eqs. de Estado, {/Symbol e} {/Symbol \264} P'
 set xlabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
 set ylabel 'Pressure [MeV fm^{-3}]' font "cmr10,15"
 
-plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 1:2 with lines lt rgb "blue" title "BJ", \
+plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 1:2 with lines lt rgb "blue" title hadron_eos, \
      "../eos.quarks.mit/mit_bag_model_B_110.csv" using 1:2 with lines lt rgb "red" title "B=110 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_120.csv" using 1:2 with lines lt rgb "red" title "B=120 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_130.csv" using 1:2 with lines lt rgb "red" title "B=130 MeV", \
@@ -42,8 +46,6 @@ plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 1:2 with lines lt rgb
      "../eos.quarks.mit/mit_bag_model_B_170.csv" using 1:2 with lines lt rgb "red" title "B=170 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_180.csv" using 1:2 with lines lt rgb "red" title "B=180 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_190.csv" using 1:2 with lines lt rgb "red" title "B=190 MeV"
-
-
 
 
 
@@ -69,7 +71,7 @@ set ylabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
 #set arrow from 120,0 to 120,500 nohead
 
 
-plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 2:1 with lines lt rgb "blue" title "BJ", \
+plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 2:1 with lines lt rgb "blue" title hadron_eos, \
      "../eos.quarks.mit/mit_bag_model_B_110.csv" using 2:1 with lines lt rgb "red" title "B=110 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_120.csv" using 2:1 with lines lt rgb "red" title "B=120 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_130.csv" using 2:1 with lines lt rgb "red" title "B=130 MeV", \
@@ -111,7 +113,7 @@ set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} P'
 #set label 5 at  3000, 2150 '{/Symbol x}=0.0075' font "cmr10,15"
 # set arrow from 3000,2000 to 2950,2150 nohead
 
-plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 4:2 with lines lt rgb "blue" title "BJ", \
+plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 4:2 with lines lt rgb "blue" title hadron_eos, \
      "../eos.quarks.mit/mit_bag_model_B_110.csv" using 4:2 with lines lt rgb "red" title "B=110 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_120.csv" using 4:2 with lines lt rgb "red" title "B=120 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_130.csv" using 4:2 with lines lt rgb "red" title "B=130 MeV", \
@@ -148,7 +150,7 @@ set ytics add ("3{/Symbol r}_0" 0.48)
 set ytics add ("10{/Symbol r}_0" 1.6)
 
 
-plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 4:3 with lines lt rgb "blue" title "BJ", \
+plot "../eos.hadron.Bethe_Johnson/bethe_johnson.csv" using 4:3 with lines lt rgb "blue" title hadron_eos, \
     0.16 with lines lt rgb "#660000" title "n_0", \
     0.48 with lines lt rgb "#660000" title "5 n_0", \
     1.6 with lines lt rgb "#660000" title "10 n_0", \
