@@ -33,10 +33,11 @@ set xlabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
 set ylabel 'Pressure [MeV fm^{-3}]' font "cmr10,15"
 
 plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 1:2 with lines lt rgb "blue" title "SWRDP", \
-     "../EOS.quarks.mit/mit_bag_model_B_50.csv" using 1:2 with lines lt rgb "red" title "B=50 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_70.csv" using 1:2 with lines lt rgb "red" title "B=70 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_90.csv" using 1:2 with lines lt rgb "red" title "B=90 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 1:2 with lines lt rgb "red" title "B=110 MeV"
+     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 1:2 with lines lt rgb "red" title "B=110 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_130.csv" using 1:2 with lines lt rgb "red" title "B=130 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_150.csv" using 1:2 with lines lt rgb "red" title "B=150 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_170.csv" using 1:2 with lines lt rgb "red" title "B=170 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_190.csv" using 1:2 with lines lt rgb "red" title "B=190 MeV"
 
 #---------------------------------------------------------------------------------------------------
 #PLOT 2 - TODAS EOS - pressure x epsilon
@@ -61,10 +62,11 @@ set ylabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
 
 
 plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 2:1 with lines lt rgb "blue" title "SWRDP", \
-     "../eos.quarks.mit/mit_bag_model_B_50.csv" using 2:1 with lines lt rgb "red" title "B=50 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_70.csv" using 2:1 with lines lt rgb "red" title "B=70 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_90.csv" using 2:1 with lines lt rgb "red" title "B=90 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 2:1 with lines lt rgb "red" title "B=110 MeV"
+     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 2:1 with lines lt rgb "red" title "B=110 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_130.csv" using 2:1 with lines lt rgb "red" title "B=130 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_150.csv" using 2:1 with lines lt rgb "red" title "B=150 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_170.csv" using 2:1 with lines lt rgb "red" title "B=170 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_190.csv" using 2:1 with lines lt rgb "red" title "B=190 MeV"
 
 
 #---------------------------------------------------------------------------------------------------
@@ -98,10 +100,11 @@ set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} P'
 # set arrow from 3000,2000 to 2950,2150 nohead
 
 plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:2 with lines lt rgb "blue" title "SWRDP", \
-     "../eos.quarks.mit/mit_bag_model_B_50.csv" using 4:2 with lines lt rgb "red" title "B=50 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_70.csv" using 4:2 with lines lt rgb "red" title "B=70 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_90.csv" using 4:2 with lines lt rgb "red" title "B=90 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 4:2 with lines lt rgb "red" title "B=110 MeV"
+     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 4:2 with lines lt rgb "red" title "B=110 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_130.csv" using 4:2 with lines lt rgb "red" title "B=130 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_150.csv" using 4:2 with lines lt rgb "red" title "B=150 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_170.csv" using 4:2 with lines lt rgb "red" title "B=170 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_190.csv" using 4:2 with lines lt rgb "red" title "B=190 MeV"
 
 #---------------------------------------------------------------------------------------------------
 #PLOT 4 - TODAS EOS - n x epsilon
@@ -114,7 +117,7 @@ set yrange[0:4]
 
 #set output "../plots/MFT.QCD.n_epsilon.eps"
 
-set key left center box linestyle -1
+set key left top box linestyle -1
 
 set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} n'
 
@@ -133,7 +136,8 @@ plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:3 with lines lt rg
     0.16 with lines lt rgb "#660000" title "n_0", \
     0.48 with lines lt rgb "#660000" title "5 n_0", \
     1.6 with lines lt rgb "#660000" title "10 n_0", \
-     "../eos.quarks.mit/mit_bag_model_B_50.csv" using 4:3 with lines lt rgb "red" title "B=50 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_70.csv" using 4:3 with lines lt rgb "red" title "B=70 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_90.csv" using 4:3 with lines lt rgb "red" title "B=90 MeV", \
-     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 4:3 with lines lt rgb "red" title "B=110 MeV"
+     "../eos.quarks.mit/mit_bag_model_B_110.csv" using 4:3 with lines lt rgb "red" title "B=110 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_130.csv" using 4:3 with lines lt rgb "red" title "B=130 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_150.csv" using 4:3 with lines lt rgb "red" title "B=150 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_170.csv" using 4:3 with lines lt rgb "red" title "B=170 MeV", \
+     "../eos.quarks.mit/mit_bag_model_B_190.csv" using 4:3 with lines lt rgb "red" title "B=190 MeV"
