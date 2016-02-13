@@ -10,7 +10,25 @@ reset
 set datafile separator ","
 
 set encoding iso
-set terminal postscript eps enhanced font "cmr10"
+#set terminal postscript eps enhanced font "cmr10"
+
+set terminal postscript eps enhanced font "Gill Sans,9" linewidth 2 rounded fontscale 1.0
+
+# Line style for axes
+set style line 80 lt 1 linecolor rgb "#808080"
+
+# Line style for grid
+set style line 81 lt 0  # dashed
+set style line 81 lt rgb "#808080"  # grey
+
+# Line style for key
+set style line 82 lt 1 linecolor rgb "black" linewidth 0
+
+
+set grid back linestyle 81
+
+set border 3 back linestyle 80
+
 set lmargin 10
 set grid
 
@@ -23,16 +41,16 @@ set output "./swrdp_MIT.eps"
 #---------------------------------------------------------------------------------------------------
 
 
-set key left box linestyle -1
+set key width 1 height 1 left box linestyle 82
 
-set xrange[0:1000]
-set yrange[0:1000]
+set xrange[0:2000]
+set yrange[0:800]
 
 set title 'Eqs. de Estado, {/Symbol e} {/Symbol \264} P'
 set xlabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
 set ylabel 'Pressure [MeV fm^{-3}]' font "cmr10,15"
 
-plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 1:2 with lines lt rgb "blue" title "SWRDP", \
+plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 1:2 with lines lt rgb "blue" title "SWRDP l=85", \
      "../eos.quarks.mit/mit_bag_model_B_110.csv" using 1:2 with lines lt rgb "red" title "B=110 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_130.csv" using 1:2 with lines lt rgb "red" title "B=130 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_150.csv" using 1:2 with lines lt rgb "red" title "B=150 MeV", \
@@ -46,10 +64,10 @@ plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 1:2 with lines lt rg
 
 #set output "../plots/MFT.QCD.epsilon_P.eps"
 
-set key right bottom box linestyle -1
+set key right bottom box linestyle 82
 
-set yrange[0:1000]
-set xrange[0:1000]
+set yrange[0:2000]
+set xrange[0:800]
 
 unset xrange
 unset yrange
@@ -61,7 +79,7 @@ set ylabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
 #set arrow from 120,0 to 120,500 nohead
 
 
-plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 2:1 with lines lt rgb "blue" title "SWRDP", \
+plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 2:1 with lines lt rgb "blue" title "SWRDP l=85", \
      "../eos.quarks.mit/mit_bag_model_B_110.csv" using 2:1 with lines lt rgb "red" title "B=110 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_130.csv" using 2:1 with lines lt rgb "red" title "B=130 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_150.csv" using 2:1 with lines lt rgb "red" title "B=150 MeV", \
@@ -75,13 +93,13 @@ plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 2:1 with lines lt rg
 
 #set output "../plots/MFT.QCD.mu_P.eps"
 
-set key top left box linestyle -1
+set key top left box linestyle 82
 
 unset xrange
 unset yrange
 
-set xrange[500:1500]
-set yrange[0:200]
+set xrange[900:1300]
+set yrange[0:150]
 
 #set ytics 100
 #set xtics 250
@@ -99,7 +117,7 @@ set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} P'
 #set label 5 at  3000, 2150 '{/Symbol x}=0.0075' font "cmr10,15"
 # set arrow from 3000,2000 to 2950,2150 nohead
 
-plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:2 with lines lt rgb "blue" title "SWRDP", \
+plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:2 with lines lt rgb "blue" title "SWRDP l=85", \
      "../eos.quarks.mit/mit_bag_model_B_110.csv" using 4:2 with lines lt rgb "red" title "B=110 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_130.csv" using 4:2 with lines lt rgb "red" title "B=130 MeV", \
      "../eos.quarks.mit/mit_bag_model_B_150.csv" using 4:2 with lines lt rgb "red" title "B=150 MeV", \
@@ -110,14 +128,14 @@ plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:2 with lines lt rg
 #PLOT 4 - TODAS EOS - n x epsilon
 #---------------------------------------------------------------------------------------------------
 
-reset
+# reset
 
 #set xrange[0:10]
-set yrange[0:4]
+set yrange[0:2]
 
 #set output "../plots/MFT.QCD.n_epsilon.eps"
 
-set key left top box linestyle -1
+set key left center box linestyle 82
 
 set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} n'
 
@@ -132,7 +150,7 @@ set ytics add ("3{/Symbol r}_0" 0.48)
 set ytics add ("10{/Symbol r}_0" 1.6)
 
 
-plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:3 with lines lt rgb "blue" title "SWRDP", \
+plot "../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv" using 4:3 with lines lt rgb "blue" title "SWRDP l=85", \
     0.16 with lines lt rgb "#660000" title "n_0", \
     0.48 with lines lt rgb "#660000" title "5 n_0", \
     1.6 with lines lt rgb "#660000" title "10 n_0", \

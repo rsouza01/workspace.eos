@@ -6,14 +6,13 @@ reset
 #Macros
 
 set macro
-hyb_eos='BJ+MIT'
 
 
 # Settings for all plots
 set datafile separator ","
 
 set encoding iso
-set terminal postscript eps enhanced font "cmr10"
+set terminal postscript eps enhanced font "Verdana,12"
 set lmargin 10
 set grid
 
@@ -26,16 +25,21 @@ set output "./hyb_SWRDP_MIT.eps"
 #---------------------------------------------------------------------------------------------------
 
 
-set key left box linestyle -1
+set key left box width 2 height 1
 
-set xrange[0:2000]
-set yrange[0:400]
+set xrange[0:1500]
+set yrange[0:200]
 
 set title 'Eqs. de Estado, {/Symbol e} {/Symbol \264} P'
-set xlabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
-set ylabel 'Pressure [MeV fm^{-3}]' font "cmr10,15"
+set xlabel '{/Symbol e} [MeV fm^{-3}]'
+set ylabel 'Pressure [MeV fm^{-3}]'
 
-plot "./SWRDP_0085.MIT.B_130.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP + MIT(B=130 MeV)"
+plot "./SWRDP_0085.MIT.B_90.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=90 MeV)", \
+     "./SWRDP_0085.MIT.B_110.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=110 MeV)", \
+     "./SWRDP_0085.MIT.B_130.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=130 MeV)", \
+     "./SWRDP_0085.MIT.B_150.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=150 MeV)", \
+     "./SWRDP_0085.MIT.B_170.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=170 MeV)", \
+     "./SWRDP_0085.MIT.B_190.NUC.csv" using 1:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=190 MeV)"
 
 
 
@@ -48,21 +52,24 @@ plot "./SWRDP_0085.MIT.B_130.NUC.csv" using 1:2 with lines lt rgb "blue" title "
 
 set key right bottom box linestyle -1
 
-set yrange[0:2000]
-set xrange[0:400]
+set yrange[0:1500]
+set xrange[0:200]
 
 unset xrange
 unset yrange
 
 set title 'Eqs. de Estado,  P {/Symbol \264} {/Symbol e}'
-set xlabel 'Pressure [MeV fm^{-3}]' font "cmr10,15"
-set ylabel '{/Symbol e} [MeV fm^{-3}]' font "cmr10,15"
+set xlabel 'Pressure [MeV fm^{-3}]'
+set ylabel '{/Symbol e} [MeV fm^{-3}]'
 
 #set arrow from 120,0 to 120,500 nohead
 
-
-plot "./SWRDP_0085.MIT.B_130.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP + MIT(B=130 MeV)"
-
+plot "./SWRDP_0085.MIT.B_90.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP85 + MIT(B=90 MeV)", \
+     "./SWRDP_0085.MIT.B_110.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP85 + MIT(B=110 MeV)", \
+     "./SWRDP_0085.MIT.B_130.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP85 + MIT(B=130 MeV)", \
+     "./SWRDP_0085.MIT.B_150.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP85 + MIT(B=150 MeV)", \
+     "./SWRDP_0085.MIT.B_170.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP85 + MIT(B=170 MeV)", \
+     "./SWRDP_0085.MIT.B_190.NUC.csv" using 2:1 with lines lt rgb "blue" title "SWRDP85 + MIT(B=190 MeV)"
 
 
 
@@ -84,8 +91,8 @@ set yrange[0:2000]
 #set xtics 250
 set grid
 
-set xlabel '{/Symbol m} [MeV]' font "cmr10,15"
-set ylabel 'Pressure [MeV fm^{-3}]' font "cmr10,15"
+set xlabel '{/Symbol m} [MeV]'
+set ylabel 'Pressure [MeV fm^{-3}]'
 
 set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} P'
 
@@ -96,5 +103,10 @@ set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} P'
 #set label 5 at  3000, 2150 '{/Symbol x}=0.0075' font "cmr10,15"
 # set arrow from 3000,2000 to 2950,2150 nohead
 
-plot "./SWRDP_0085.MIT.B_130.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP + MIT(B=130 MeV)"
+plot "./SWRDP_0085.MIT.B_90.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=90 MeV)", \
+     "./SWRDP_0085.MIT.B_110.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=110 MeV)", \
+     "./SWRDP_0085.MIT.B_130.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=130 MeV)", \
+     "./SWRDP_0085.MIT.B_150.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=150 MeV)", \
+     "./SWRDP_0085.MIT.B_170.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=170 MeV)", \
+     "./SWRDP_0085.MIT.B_190.NUC.csv" using 3:2 with lines lt rgb "blue" title "SWRDP85 + MIT(B=190 MeV)"
 
