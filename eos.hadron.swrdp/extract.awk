@@ -16,7 +16,7 @@
 
 
 BEGIN {
-    print "# energy density [MeV fm-3], pressure [MeV fm-3], baryon density [1/fm-3], chemical potential [MeV]"
+    print "# energy density [MeV fm-3], pressure [MeV fm-3], baryon density [1/fm-3], chemical potential [MeV], strangeness fraction [admin]"
 
 } { 
 
@@ -26,14 +26,15 @@ BEGIN {
 	pressure = $5
 	baryon_density = $6
 	chem_pot = $8
+	strangeness_fraction = $7
 
-	printf "%.6f, %.6f, %.6f, %.6f\n", energy_density, pressure, baryon_density, chem_pot
+	printf "%.6f, %.6f, %.6f, %.6f, %.6f\n", energy_density, pressure, baryon_density, chem_pot, strangeness_fraction
 
   }
 
   
 } END { 
 
-        print "# energy density [MeV fm-3], pressure [MeV fm-3], baryon density [1/fm-3], chemical potential [MeV]"
+        print "# energy density [MeV fm-3], pressure [MeV fm-3], baryon density [1/fm-3], chemical potential [MeV], strangeness fraction [admin]"
 
 } 

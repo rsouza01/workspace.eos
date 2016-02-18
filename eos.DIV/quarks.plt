@@ -159,4 +159,4 @@ set title 'Eqs. de Estado, {/Symbol m} {/Symbol \264} P'
 #set label 5 at  3000, 2150 '{/Symbol x}=0.0075' font "cmr10,15"
 # set arrow from 3000,2000 to 2950,2150 nohead
 
-plot for [i=1:words(files_collection)]  word(files_collection, i) using 3:2 with lines lt rgb word(color_collection_plot, i) title word(titles_collection, i)
+plot for [i=1:words(files_collection)]  word(files_collection, i) using 4:2 with lines lt rgb word(color_collection_plot, i) title word(titles_collection, i)
