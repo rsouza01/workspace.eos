@@ -1,0 +1,12 @@
+################################################################################
+# config_name = SWRDP_MIT.properties.conf
+# mu_0 = 1010.0
+# quarks_eos_file_name = ../eos.quarks.mit/mit_bag_model_B_90.csv
+# hadrons_eos_file_name = ../eos.hadron.swrdp/eos_swrdp_l0085_L97a32.csv
+#
+# Range Quarks - P(mu) = EoSRange(inf_limit=0.0, sup_limit=2735.75862099)
+# Range Hadrons - P(mu)  = EoSRange(inf_limit=940.0, sup_limit=2000.0)
+#
+# Range = EoSRange(inf_limit=940.0, sup_limit=2000.0)
+# Try another initial guess for the chemical potential.
+################################################################################

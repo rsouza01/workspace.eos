@@ -1,0 +1,2 @@
+energy density, perpendicular pressure, parallel pressure, energy density (MeV/fm^3), pressure (MeV/fm^3), baryon density (fm^-3) , strangeness fraction,  baryon chemical potential (MeV)
+
